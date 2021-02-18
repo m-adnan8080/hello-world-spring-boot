@@ -7,12 +7,11 @@ pipeline {
         sh 'mnv clean package'
       }
     }
+  }
 
-    stage('Post') {
-      steps {
-        sh 'cleanWs()'
-      }
+  post {
+    always {
+      cleanWs()
     }
-
   }
 }

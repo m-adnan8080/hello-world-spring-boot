@@ -16,8 +16,8 @@ pipeline {
           }
           timeout(time: 5, unit: 'MINUTES'){
             def qg = waitForQualityGate()
-            if (qg.Status != 'OK'){
-              error "Pipeline aborted due to quality gate failure : ${qg.Status}"
+            if (qg.status != 'OK'){
+              error "Pipeline aborted due to quality gate failure : ${qg.status}"
             }
           }
           sh 'mvn clean package'

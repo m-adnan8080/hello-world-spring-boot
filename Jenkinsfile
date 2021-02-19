@@ -13,6 +13,7 @@ pipeline {
       steps {
         sh 'mvn -version'
         sh 'mvn clean package'
+        sh 'cp target/myproject-0.0.1-SNAPSHOT.jar $HOME/data/'
       }
     }
   }

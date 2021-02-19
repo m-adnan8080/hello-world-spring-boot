@@ -3,6 +3,9 @@ pipeline {
   tools {
     maven '3.6.3'
   }
+  options {
+    timestamps ()
+  }
     // docker {
     //   image 'maven'
     //   args '-v $HOME/.m2:/root/.m2'
